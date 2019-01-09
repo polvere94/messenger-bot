@@ -24,7 +24,7 @@ class Bot extends EventEmitter {
     return request({
       method: 'GET',
       uri: `${this.graph_url}${id}`,
-      qs: this._getQs({fields: 'first_name,last_name,profile_pic,locale,timezone,gender'}),
+      qs: this._getQs({fields: 'first_name,last_name,profile_pic'}),
       json: true
     })
       .then(body => {
